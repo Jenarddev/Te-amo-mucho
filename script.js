@@ -79,7 +79,7 @@ nextToMusic.addEventListener('click', ()=>{
 
 // ------- Vinyl & audio handling -------
 // The <img id="vinyl"> in your HTML should point to your local image, e.g.:
-// <img id="vinyl" src="images/vinyl.png" alt="Vinyl" />
+// <img id="vinyl" src="cover.jpg" alt="Vinyl" />
 function startVinyl(){ vinyl.classList.add('rotating'); playBtn.textContent='⏸'; }
 function stopVinyl(){ vinyl.classList.remove('rotating'); playBtn.textContent='▶️'; }
 
