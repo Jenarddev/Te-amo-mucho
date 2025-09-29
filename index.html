@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Love Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame" role="application" aria-label="Digital love journey">
+
+    <!-- PAGE 1: Welcome -->
+    <section id="page-1" class="page visible" aria-hidden="false">
+      <div class="card" role="region" aria-label="Welcome card">
+        <h1>To My Favorite Person</h1>
+        <div class="meta">A small digital surprise made with you ✨</div>
+        <button id="beginBtn" class="btn" aria-haspopup="true">Click to Begin</button>
+        <div id="countdown" class="countdown" style="display:none">Starting in <span id="cd-num">3</span>…</div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: Photos -->
+    <section id="page-2" class="page hidden" aria-hidden="true">
+      <div style="width:100%; text-align:center;">
+        <div style="font-weight:600; color:var(--muted); margin-bottom:8px">Photo Memories</div>
+
+        <div class="polaroid-stack" aria-hidden="true">
+          <div class="polaroid p1"><img src="img/1.jpg" alt="Photo 1"></div>
+          <div class="polaroid p2"><img src="img/2.jpg" alt="Photo 2"></div>
+          <div class="polaroid p3"><img src="img/3.jpg" alt="Photo 3"></div>
+          <div class="polaroid p4"><img src="img/4.jpg" alt="Photo 4"></div>
+          <div class="polaroid p5"><img src="img/5.jpg" alt="Photo 5"></div>
+        </div>
+
+        <button id="nextToMusic" class="next-btn" aria-label="Next Surprise">NEXT SURPRISE!</button>
+
+        <div class="dots" aria-hidden="true" style="justify-content:center; margin-top:12px">
+          <div class="dot"></div><div class="dot active"></div><div class="dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: Music -->
+    <section id="page-3" class="page hidden" aria-hidden="true">
+      <div class="music-wrap" style="width:100%; align-items:center">
+        <div style="text-align:center; font-weight:600; color:var(--muted)">Songs That Remind Me of You</div>
+
+        <div style="position:relative; width:100%; display:flex; align-items:center; justify-content:center">
+          <!-- Local vinyl image instead of div -->
+          <img id="vinyl" src="img/cover.jpg" alt="Vinyl Record" class="vinyl" />
+
+          <div id="playRequired" class="play-required" style="display:none">
+            Tap to enable audio
+            <button id="forcePlay" class="btn" style="margin-left:8px">Play</button>
+          </div>
+        </div>
+
+        <div class="track-card" style="margin-top:8px">
+          <div class="track-title">Your Universe</div>
+          <div style="color:var(--muted); font-size:13px">Rico Blanco</div>
+
+          <div class="controls">
+            <button id="prev" class="control-btn" title="Previous">⏮</button>
+            <button id="playBtn" class="control-btn" title="Play/Pause">▶️</button>
+            <button id="next" class="control-btn" title="Next">⏭</button>
+          </div>
+        </div>
+
+        <div class="dots" style="margin-top:18px">
+          <div class="dot"></div><div class="dot"></div><div class="dot active"></div>
+        </div>
+
+        <!-- Main card -->
+<div class="music-wrap">
+  <div class="card">
+    <!-- album cover, song title, controls -->
+  </div>
+</div>
+
+<!-- Secret button OUTSIDE -->
+<button class="secret-btn">Secret Message</button>
+
+
+       <!-- Secret Message Button -->
+<div style="text-align:center; margin-top:20px;">
+  <button id="secretMessageBtn" class="btn">Secret Message</button>
+</div>
+
+<!-- Envelope Trigger -->
+<div id="envelopeTrigger" class="envelope-wrap" aria-label="Open secret message" role="button" tabindex="0">
+  <div class="envelope"></div>
+  <div class="envelope-text">Open Me 💌</div>
+</div>
+
+<!-- Popup Modal -->
+<div id="secretModal" class="modal hidden" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>Secret Message 💖</h2>
+    <p>You are the most special person to me, and this is just a small way of showing how much I care. 💕</p>
+  </div>
+</div>
+
+
+  <!-- Audio -->
+  <audio id="audio" src="img/u.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
